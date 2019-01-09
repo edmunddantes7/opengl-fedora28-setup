@@ -1,0 +1,26 @@
+gcc -o main -I/home/ajay/include -L/home/ajay/include/LGFW -lglfw3 -lGL -lX11 -lpthread -lXrandr -lXi -ldl main.c
+In file included from main.c:2:
+/home/ajay/include/glad/glad.h:27:2: error: #error OpenGL header already included, remove this include, glad already provides it
+ #error OpenGL header already included, remove this include, glad already provides it
+  ^~~~~
+In file included from main.c:2:
+/home/ajay/include/glad/glad.h:879: warning: "GL_INVALID_INDEX" redefined
+ #define GL_INVALID_INDEX 0xFFFFFFFF
+ 
+In file included from /usr/include/GL/gl.h:2055,
+                 from /home/ajay/include/GLFW/glfw3.h:202,
+                 from main.c:1:
+/usr/include/GL/glext.h:1354: note: this is the location of the previous definition
+ #define GL_INVALID_INDEX                  0xFFFFFFFFu
+ 
+In file included from main.c:2:
+/home/ajay/include/glad/glad.h:921: warning: "GL_TIMEOUT_IGNORED" redefined
+ #define GL_TIMEOUT_IGNORED 0xFFFFFFFFFFFFFFFF
+ 
+In file included from /usr/include/GL/gl.h:2055,
+                 from /home/ajay/include/GLFW/glfw3.h:202,
+                 from main.c:1:
+/usr/include/GL/glext.h:1466: note: this is the location of the previous definition
+ #define GL_TIMEOUT_IGNORED                0xFFFFFFFFFFFFFFFFull
+ 
+make: *** [Makefile:5: all] Error 1
